@@ -25,7 +25,7 @@ public class Screen {
     }
 
     /**
-     * Prints text to screen and replaces all tags with it's designated text.
+     * Prints text to screen and replaces all tags with their designated text.
      */
     public void print() {
         String screen = text;
