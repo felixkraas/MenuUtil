@@ -1,0 +1,8 @@
+This is generic text that will appear just like this on the Screen.
+
+#This is a commend and will not be displayed
+
+@FILE{test.txt} #this loads a file as plain text and includes it here
+
+@TAG{this_is_a_tag} #this is a tag that can be replaced with what ever you want at runtime
+
