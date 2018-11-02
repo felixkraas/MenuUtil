@@ -58,4 +58,21 @@ public class Tag {
         return parameter.get(index);
     }
 
+    /**
+     * Gets a List of all parameters as {@link String}.
+     *
+     * @return All parameters
+     */
+    public ArrayList<String> getParameter() {
+        return parameter;
+    }
+
+    /**
+     * Gets type of {@code Tag}.
+     *
+     * @return Type of the tag
+     */
+    public TagType getType() {
+        return type;
+    }
 }
