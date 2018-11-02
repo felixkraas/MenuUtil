@@ -13,6 +13,7 @@ import java.util.Scanner;
  * for MenuUtil
  * <p>
  * Contains utility for creating and working with Screens.
+ *
  * @author Felix
  */
 public class ScreenUtil {
@@ -21,6 +22,7 @@ public class ScreenUtil {
 
     /**
      * Reads text from TXT file for use in menu.
+     *
      * @param fileName Name of the file to be loaded. Should but must not end with .txt.
      * @return Text read from the file.
      */
@@ -58,6 +60,7 @@ public class ScreenUtil {
 
     /**
      * Scans screen for tags to be replaced with text.
+     *
      * @param screen Screen to be scanned.
      */
     public static void scanReplacementTags(Screen screen) {
@@ -78,6 +81,7 @@ public class ScreenUtil {
 
     /**
      * Reads input made by user.
+     *
      * @return Input the user made.
      */
     public static String readInput() {

@@ -18,6 +18,7 @@ public class Screen {
 
     /**
      * Creates new screen.
+     *
      * @param text Text of the screen.
      */
     public Screen(String text) {
@@ -48,6 +49,7 @@ public class Screen {
 
     /**
      * Gets text of screen.
+     *
      * @return Text of screen.
      */
     public String getText() {
@@ -56,7 +58,8 @@ public class Screen {
 
     /**
      * Edit a tags replacement text.
-     * @param tag Tag to edit.
+     *
+     * @param tag         Tag to edit.
      * @param replacement Replacement for the tag.
      */
     public void editRaplaceTag(String tag, String replacement) {
@@ -65,6 +68,7 @@ public class Screen {
 
     /**
      * Adds a new tag to the Screen.
+     *
      * @param tag Tag to be added.
      */
     public void addReplaceTag(String tag) {
@@ -73,6 +77,7 @@ public class Screen {
 
     /**
      * Gets all tags and there replacement.
+     *
      * @return All tags and there replacement.
      */
     public Map<String, String> getReplaceTags() {
@@ -81,6 +86,7 @@ public class Screen {
 
     /**
      * Get current input for the screen.
+     *
      * @return Current input.
      */
     public String getInput() {
@@ -89,6 +95,7 @@ public class Screen {
 
     /**
      * Set the screen to await input from user.
+     *
      * @param awaitsInput Whether or not the screen awaits input from the user.
      */
     public void setAwaitsInput(boolean awaitsInput) {

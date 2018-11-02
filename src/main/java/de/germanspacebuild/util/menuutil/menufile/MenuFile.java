@@ -14,6 +14,7 @@ public class MenuFile {
 
     /**
      * Creates new MenuFiles instance
+     *
      * @param filePath Path of text file
      */
     public MenuFile(Path filePath) {
@@ -22,6 +23,7 @@ public class MenuFile {
 
     /**
      * Reads text from files and stores each line as an entry in an {@link ArrayList}
+     *
      * @return False if file could not be read and true if reading was successful
      */
     public boolean read() {
@@ -40,6 +42,7 @@ public class MenuFile {
 
     /**
      * Returns lines of the text as new {@link ArrayList}
+     *
      * @return Text as list
      */
     public ArrayList<String> getLines() {

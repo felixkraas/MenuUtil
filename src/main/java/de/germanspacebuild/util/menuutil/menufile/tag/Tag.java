@@ -11,6 +11,7 @@ public class Tag {
 
     /**
      * Creates new {@code Tag} from string.
+     *
      * @param tagLine Line that contains the Tag
      */
     public Tag(String tagLine) {
@@ -20,6 +21,7 @@ public class Tag {
 
     /**
      * Determine the type of the {@code Tag}.
+     *
      * @param tag Line that contains the tag
      * @return Type of the tag
      */
@@ -37,6 +39,7 @@ public class Tag {
 
     /**
      * Parses all parameters from a given {@code Tag}.
+     *
      * @param tag Line that contains the tag
      * @return List of all parameters in the tag
      */
@@ -47,6 +50,7 @@ public class Tag {
 
     /**
      * Returns the parameter at a given index.
+     *
      * @param index Index of the parameter
      * @return Parameter at the given index.
      */
