@@ -20,43 +20,6 @@ public class ScreenUtil {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    /**
-     * Reads text from TXT file for use in menu.
-     *
-     * @param fileName Name of the file to be loaded. Should but must not end with .txt.
-     * @return Text read from the file.
-     */
-    public static String readTextFile(String fileName) {
-        String text = "";
-        String line;
-
-        if (!fileName.endsWith(".txt")) {
-            StringBuilder sb = new StringBuilder(fileName);
-            sb.append(".txt");
-            fileName = sb.toString();
-        }
-
-        InputStream in = ClassLoader.getSystemResourceAsStream(fileName);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-
-        try {
-            while ((line = reader.readLine()) != null) {
-                StringBuilder sbText = new StringBuilder(text);
-                sbText.append(line);
-                sbText.append(System.lineSeparator());
-                text = sbText.toString();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return text;
-    }
 
     /**
      * Scans screen for tags.

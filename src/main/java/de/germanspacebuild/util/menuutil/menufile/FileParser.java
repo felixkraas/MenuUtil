@@ -7,7 +7,7 @@ public class FileParser {
 
     private MenuFile menuFile;
 
-    public FileParser(Path menuFilePath) {
+    public FileParser(String menuFilePath) {
         this.menuFile = new MenuFile(menuFilePath);
     }
 

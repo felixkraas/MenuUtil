@@ -2,14 +2,17 @@ package de.germanspacebuild.util.menuutil.menufile;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class MenuFile {
 
-    private Path filePath;
+    private String filePath;
     private ArrayList<String> lines;
 
     /**
@@ -17,7 +20,7 @@ public class MenuFile {
      *
      * @param filePath Path of text file
      */
-    public MenuFile(Path filePath) {
+    public MenuFile(String filePath) {
         this.filePath = filePath;
     }
 
@@ -27,11 +30,18 @@ public class MenuFile {
      * @return False if file could not be read and true if reading was successful
      */
     public boolean read() {
+        if (!filePath.endsWith(".txt")) {
+            StringBuilder sb = new StringBuilder(filePath.toString());
+            sb.append(".txt");
+            filePath = sb.toString();
+        }
         try {
-            BufferedReader reader = Files.newBufferedReader(filePath, Charset.forName("UTF-8"));
+            InputStream in = ClassLoader.getSystemResourceAsStream(filePath);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
             lines = new ArrayList<>();
-            while (reader.readLine() != null) {
-                lines.add(reader.readLine());
+            String line;
+            while ((line = reader.readLine()) != null) {
+                lines.add(line);
             }
             return true;
         } catch (IOException e) {
