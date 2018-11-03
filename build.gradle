@@ -10,6 +10,16 @@ jar {
     from "LICENSE.md"
 }
 
+test {
+    testLogging {
+        events "failed", "passed"
+        debug {
+            events "failed", "passed", "started", "skipped"
+            exceptionFormat 'full'
+        }
+    }
+}
+
 repositories {
     mavenCentral()
 }
