@@ -59,24 +59,12 @@ public class ScreenUtil {
     }
 
     /**
-     * Scans screen for tags to be replaced with text.
+     * Scans screen for tags.
      *
      * @param screen Screen to be scanned.
      */
     public static void scanReplacementTags(Screen screen) {
-        final String text = screen.getText();
-        List<String> words = Arrays.asList(text.split("(\\r?\\n)"));
-        for (String word : words) {
-            if (word.startsWith("%")) {
-                if (word.contains("File")) {
-                    String[] file = word.split("([_])");
-                    screen.addReplaceTag(word);
-                    screen.editRaplaceTag(word, ScreenUtil.readTextFile(file[file.length - 1]));
-                    continue;
-                }
-                screen.addReplaceTag(word);
-            }
-        }
+
     }
 
     /**
