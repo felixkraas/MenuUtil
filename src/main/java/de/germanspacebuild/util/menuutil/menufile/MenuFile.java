@@ -1,19 +1,18 @@
 package de.germanspacebuild.util.menuutil.menufile;
 
+import de.germanspacebuild.util.menuutil.menufile.tag.Tag;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class MenuFile {
 
     private String filePath;
     private ArrayList<String> lines;
+    private ArrayList<Tag> tags;
 
     /**
      * Creates new MenuFiles instance
@@ -31,7 +30,7 @@ public class MenuFile {
      */
     public boolean read() {
         if (!filePath.endsWith(".txt")) {
-            StringBuilder sb = new StringBuilder(filePath.toString());
+            StringBuilder sb = new StringBuilder(filePath);
             sb.append(".txt");
             filePath = sb.toString();
         }
@@ -51,6 +50,17 @@ public class MenuFile {
     }
 
     /**
+     * Removes all lines that are comments.
+     */
+    private void removeComments() {
+        for (String line : lines) {
+            if (line.startsWith("#")) {
+                lines.remove(line);
+            }
+        }
+    }
+
+    /**
      * Returns lines of the text as new {@link ArrayList}
      *
      * @return Text as list
@@ -59,7 +69,7 @@ public class MenuFile {
         if (lines == null) {
             read();
         }
-        return new ArrayList<String>(lines);
+        return new ArrayList<>(lines);
     }
 
 }
