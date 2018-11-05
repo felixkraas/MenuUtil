@@ -52,6 +52,13 @@ public class TagTest {
         assertEquals(Arrays.asList("1", "This is a test", "this_is_a_test_id"), tag.getParameter());
     }
 
+
+    @Test
+    public void getParameterActionIndex() {
+        tag = new Tag("@ACTION{1, This is a test, this_is_a_test_id}");
+        assertEquals("This is a test", tag.getParameter(1));
+    }
+
     @Test
     public void getTypeAction() {
         tag = new Tag("@ACTION{1, This is a test, this_is_a_test_id}");

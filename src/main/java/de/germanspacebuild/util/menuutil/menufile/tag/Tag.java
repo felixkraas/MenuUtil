@@ -56,7 +56,7 @@ public class Tag {
      * @param index Index of the parameter
      * @return Parameter at the given index.
      */
-    public String getParamenter(int index) {
+    public String getParameter(int index) {
         return parameter.get(index);
     }
 
