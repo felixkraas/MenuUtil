@@ -5,6 +5,6 @@ This is generic text that will appear just like this on the Screen.
 
 @FILE{test.txt} #this loads a file as plain text and includes it here
 
-@ACTION{1, "This is the text to be displayed in this entry", this is the name/id of the action to be performed} #Format: Number th select this, Text to be displayed, name of action tpo be performed (annotation on action function)
+@ACTION{1, This is the text to be displayed in this entry, this is the name/id of the action to be performed} #Format: Number th select this, Text to be displayed, name of action tpo be performed (annotation on action function)
 
 @INPUT{INT} #what type of input is awaited, e.g. INT (Integer), BOOL/BOOLEAN (boolean - 1/0 or true/false), STRING (basic text), FALSE (no input awaited)
