@@ -17,6 +17,30 @@ public class TagTest {
     private Tag tag;
 
     @Test
+    public void getParameterInput() {
+        tag = new Tag("@INPUT{INT}");
+        assertEquals(Arrays.asList("INT"), tag.getParameter());
+    }
+
+    @Test
+    public void getTypeInut() {
+        tag = new Tag("@INPUT{INT}");
+        assertEquals(TagType.INPUT, tag.getType());
+    }
+
+    @Test
+    public void getParameterID() {
+        tag = new Tag("@{this_is_a_test_id}");
+        assertEquals(Arrays.asList("this_is_a_test_id"), tag.getParameter());
+    }
+
+    @Test
+    public void getTypeID() {
+        tag = new Tag("@ID{this_is_a_test_id}");
+        assertEquals(TagType.ID, tag.getType());
+    }
+
+    @Test
     public void getTypeInvalid() {
         tag = new Tag("@ThisIsAnInvalidTag{ladiad, di ,da}");
         assertEquals(TagType.INVALID, tag.getType());
