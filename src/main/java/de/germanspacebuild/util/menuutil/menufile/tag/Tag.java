@@ -44,7 +44,7 @@ public class Tag {
      * @return List of all parameters in the tag
      */
     private ArrayList<String> parseParameter(String tag) {
-        String[] params = tag.replaceAll("@[a-zA-Z]*\\{", "").replaceAll("[}]", "").split("[,]");
+        String[] params = tag.replaceAll("@[a-zA-Z]*\\{", "").replaceAll("[}]", "").split(", ");
         return new ArrayList<>(Arrays.asList(params));
     }
 
