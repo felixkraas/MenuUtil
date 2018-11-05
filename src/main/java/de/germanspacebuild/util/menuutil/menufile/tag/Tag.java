@@ -32,6 +32,8 @@ public class Tag {
             return TagType.ACTION;
         } else if (tag.startsWith("@INPUT")) {
             return TagType.INPUT;
+        } else if (tag.startsWith("@ID")) {
+            return TagType.ID;
         } else {
             return TagType.INVALID;
         }
