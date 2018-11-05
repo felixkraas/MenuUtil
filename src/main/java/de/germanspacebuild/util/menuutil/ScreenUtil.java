@@ -14,16 +14,6 @@ public class ScreenUtil {
 
     private static Scanner scanner = new Scanner(System.in);
 
-
-    /**
-     * Scans screen for tags.
-     *
-     * @param screen Screen to be scanned.
-     */
-    public static void scanReplacementTags(Screen screen) {
-
-    }
-
     /**
      * Reads input made by user.
      *

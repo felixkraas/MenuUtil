@@ -6,12 +6,4 @@ package de.germanspacebuild.util.menuutil;
  *
  * @author Felix
  */
-@FunctionalInterface
-public interface MenuAction {
-
-    /**
-     * Contains the code that will be run when the action was selected by the user.
-     */
-    void action();
-
-}
+public interface MenuAction {}
