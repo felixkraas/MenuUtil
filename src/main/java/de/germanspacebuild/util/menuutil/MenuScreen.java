@@ -1,5 +1,7 @@
 package de.germanspacebuild.util.menuutil;
 
+import de.germanspacebuild.util.menuutil.action.MenuAction;
+
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package de.germanspacebuild.util.menuutil;
+package de.germanspacebuild.util.menuutil.action;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

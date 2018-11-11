@@ -1,4 +1,4 @@
-package de.germanspacebuild.util.menuutil;
+package de.germanspacebuild.util.menuutil.action;
 
 /**
  * Created by Felix on 13.03.2018
